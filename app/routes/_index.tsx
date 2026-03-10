@@ -606,7 +606,7 @@ export default function Index() {
               <div className="relative min-h-[24rem] overflow-hidden border-t border-white/10 lg:border-l lg:border-t-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(163,230,53,0.35),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.55))]" />
                 <img
-                  src="https://picsum.photos/seed/nvs-event-speaker/900/1100"
+                  src="https://asset.cloudinary.com/dzclm0iez/e342652bc8e2c7af3eaf6282c4aa6aff"
                   alt="Event speaker placeholder"
                   className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-85"
                   referrerPolicy="no-referrer"
