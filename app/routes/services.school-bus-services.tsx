@@ -258,7 +258,7 @@ export default function SchoolBusServicesPage() {
                 School Bus Services
               </div>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight lg:text-6xl">
-                A standalone school transport program built around child safety, visibility, and operating discipline.
+                School transport built around safety, visibility, and discipline.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
                 NVS school bus services combine driver monitoring, trained on-board staff, surveillance systems, emergency readiness, and daily operational protocols to create dependable school mobility.
@@ -286,15 +286,14 @@ export default function SchoolBusServicesPage() {
                   Operations Overview
                 </div>
                 <div className="aspect-video">
-                  <video
-                    className="h-full w-full object-cover"
-                    controls
-                    muted
-                    poster="https://picsum.photos/seed/nvs-school-bus-video/1200/800"
-                    referrerPolicy="no-referrer"
-                  >
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                  </video>
+                  <iframe
+                    src="https://www.youtube.com/embed/7Ir1qlDy0c8?autoplay=1&mute=1&loop=1&playlist=7Ir1qlDy0c8&playsinline=1"
+                    title="NVS operations video"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
               </div>
 

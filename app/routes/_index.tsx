@@ -13,7 +13,6 @@ import {
   Clock3,
   MapPinned,
   Phone,
-  Play,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -372,20 +371,16 @@ export default function Index() {
                     <p className="mt-1 text-xs font-medium text-slate-500">A short overview of NVS operations</p>
                   </div>
                 </div>
-                <button type="button" className="group relative block aspect-video w-full overflow-hidden">
-                  <img
-                    src="https://vimeo.com/1172037896"
-                    alt="NVS operations video thumbnail"
-                    className="h-full w-full scale-105 object-cover blur-[2px] transition duration-300 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
+                <div className="aspect-video w-full overflow-hidden bg-slate-950">
+                  <iframe
+                    src="https://www.youtube.com/embed/7Ir1qlDy0c8?autoplay=1&mute=1&loop=1&playlist=7Ir1qlDy0c8&playsinline=1"
+                    title="NVS operations video"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   />
-                  <div className="absolute inset-0 bg-slate-900/30 transition group-hover:bg-slate-900/40" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-primary shadow-xl transition group-hover:scale-105">
-                      <Play size={20} className="ml-0.5" />
-                    </span>
-                  </div>
-                </button>
+                </div>
               </div>
             </motion.div>
 
@@ -606,7 +601,7 @@ export default function Index() {
               <div className="relative min-h-[24rem] overflow-hidden border-t border-white/10 lg:border-l lg:border-t-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(163,230,53,0.35),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(0,0,0,0.55))]" />
                 <img
-                  src="https://asset.cloudinary.com/dzclm0iez/e342652bc8e2c7af3eaf6282c4aa6aff"
+                  src="https://res.cloudinary.com/dzclm0iez/image/upload/v1773124730/1718599018711_pi5cgo.jpg"
                   alt="Event speaker placeholder"
                   className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-85"
                   referrerPolicy="no-referrer"

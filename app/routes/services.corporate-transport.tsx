@@ -279,7 +279,7 @@ export default function CorporateTransportPage() {
                 Corporate Transport Services
               </div>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight lg:text-6xl">
-                A dedicated employee transport program built around screening, control-room visibility, and commuter reliability.
+                Employee transport built around screening, visibility, and reliability.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
                 NVS corporate transport services combine staff buses and corporate cars into one operational model covering driver verification, passenger security, GPS tracking, fleet compliance, and employee experience.
@@ -307,15 +307,14 @@ export default function CorporateTransportPage() {
                   Control Room View
                 </div>
                 <div className="aspect-video">
-                  <video
-                    className="h-full w-full object-cover"
-                    controls
-                    muted
-                    poster="https://picsum.photos/seed/nvs-corporate-transport-video/1200/800"
-                    referrerPolicy="no-referrer"
-                  >
-                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                  </video>
+                  <iframe
+                    src="https://www.youtube.com/embed/7Ir1qlDy0c8?autoplay=1&mute=1&loop=1&playlist=7Ir1qlDy0c8&playsinline=1"
+                    title="NVS operations video"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
               </div>
 

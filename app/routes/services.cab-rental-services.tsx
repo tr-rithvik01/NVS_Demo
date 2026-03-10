@@ -37,37 +37,37 @@ const fleetHighlights = [
   {
     name: "Executive Sedans",
     count: "40+",
-    image: "https://picsum.photos/seed/nvs-sedan-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773128279/Gemini_Generated_Image_3c0ovl3c0ovl3c0o_og06wp.png",
     description: "City movement, executive meetings, airport transfers, and premium day-use travel.",
   },
   {
     name: "SUV Fleet",
     count: "25+",
-    image: "https://picsum.photos/seed/nvs-suv-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773128562/Gemini_Generated_Image_mos6djmos6djmos6_mwii7z.png",
     description: "Senior leadership travel, family movement, outstation use, and high-comfort transfers.",
   },
   {
     name: "Premium MPVs",
     count: "18+",
-    image: "https://picsum.photos/seed/nvs-mpv-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773128657/Gemini_Generated_Image_mdb86tmdb86tmdb8_nau6ir.png",
     description: "Airport groups, event teams, business delegations, and flexible people movement.",
   },
   {
     name: "Tempo Travellers",
     count: "12+",
-    image: "https://picsum.photos/seed/nvs-tempo-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773130709/Gemini_Generated_Image_uuz7u2uuz7u2uuz7_bxvdsj.png",
     description: "Team outings, corporate movement, project groups, and long-route shared travel.",
   },
   {
     name: "Luxury Cars",
     count: "10+",
-    image: "https://picsum.photos/seed/nvs-luxury-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773128988/Gemini_Generated_Image_rawqzlrawqzlrawq_apnyjg.png",
     description: "VIP hosting, chauffeur-led airport service, and high-touch client transport.",
   },
   {
     name: "EV & Hybrid Fleet",
     count: "15+",
-    image: "https://picsum.photos/seed/nvs-ev-fleet/1200/800",
+    image: "https://res.cloudinary.com/dzclm0iez/image/upload/v1773130804/Gemini_Generated_Image_astewiastewiaste_nt6rh0.png",
     description: "Modern green mobility options for companies and customers prioritizing lower-emission travel.",
   },
 ];
@@ -372,7 +372,7 @@ export default function CabRentalServicesPage() {
                 Cab Rental Services
               </div>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight lg:text-6xl">
-                A multi-fleet cab platform built for Bengaluru city travel, corporate movement, airport runs, and premium chauffeur-led service.
+                Multi-fleet cab rentals for city, airport, and executive travel.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
                 NVS operates one of the larger multi-fleet cab inventories in Bengaluru, covering sedans, SUVs, premium MPVs, tempo travellers, luxury vehicles, and greener fleet options under one managed operating model.
@@ -400,11 +400,13 @@ export default function CabRentalServicesPage() {
                   Fleet Overview
                 </div>
                 <div className="aspect-[16/10]">
-                  <img
-                    src="https://picsum.photos/seed/nvs-cab-fleet-overview/1400/900"
-                    alt="NVS multi-fleet cab inventory"
-                    className="h-full w-full object-cover"
-                    referrerPolicy="no-referrer"
+                  <iframe
+                    src="https://www.youtube.com/embed/7Ir1qlDy0c8?autoplay=1&mute=1&loop=1&playlist=7Ir1qlDy0c8&playsinline=1"
+                    title="NVS operations video"
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   />
                 </div>
               </div>
@@ -439,7 +441,7 @@ export default function CabRentalServicesPage() {
           <div className="mt-10 overflow-hidden rounded-[2.75rem] border border-slate-200 bg-white shadow-lg">
             <div className="aspect-[18/7] overflow-hidden border-b border-slate-200 bg-slate-100">
               <img
-                src="https://picsum.photos/seed/nvs-full-fleet-lineup/1800/900"
+                src="https://res.cloudinary.com/dzclm0iez/image/upload/v1773127722/Gemini_Generated_Image_68sry268sry268sr_dhkr34.png"
                 alt="Full NVS vehicle lineup"
                 className="h-full w-full object-cover"
                 referrerPolicy="no-referrer"
