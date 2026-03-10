@@ -1,8 +1,3 @@
-import * as helmetAsync from "react-helmet-async";
-
-const { Helmet } = helmetAsync;
-
-
 interface SEOProps {
   title: string;
   description: string;
@@ -11,23 +6,6 @@ interface SEOProps {
   schema?: object;
 }
 
-export function SEO({ title, description, canonical, type = "website", schema }: SEOProps) {
-  const siteName = "NVS Travel Solutions";
-  const fullTitle = `${title} | ${siteName}`;
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      )}
-    </Helmet>
-  );
+export function SEO(_props: SEOProps) {
+  return null;
 }

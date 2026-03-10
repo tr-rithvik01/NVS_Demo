@@ -10,9 +10,6 @@ import type { LinksFunction } from "@remix-run/node";
 import styles from "./index.css?url";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import * as helmetAsync from "react-helmet-async";
-
-const { HelmetProvider } = helmetAsync;
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -51,9 +48,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <HelmetProvider>
-      <Outlet />
-    </HelmetProvider>
-  );
+  return <Outlet />;
 }
