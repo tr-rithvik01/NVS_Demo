@@ -10,7 +10,7 @@ import type { LinksFunction } from "@remix-run/node";
 import styles from "./index.css?url";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import helmetAsync from "react-helmet-async";
+import * as helmetAsync from "react-helmet-async";
 
 const { HelmetProvider } = helmetAsync;
 
