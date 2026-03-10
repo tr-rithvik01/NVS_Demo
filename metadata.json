@@ -1,0 +1,5 @@
+{
+  "name": "NVS Travel Solutions",
+  "description": "High-performance school transport platform built with Remix (SSR), Prisma, and FastAPI-inspired API. Optimized for LLMs with semantic HTML and dynamic JSON-LD.",
+  "requestFramePermissions": []
+}
