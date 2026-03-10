@@ -243,6 +243,7 @@ export default function Index() {
   const [activeService, setActiveService] = useState<keyof typeof heroForms>("school");
   const [isBlogCarouselHovered, setIsBlogCarouselHovered] = useState(false);
   const [isBlogDragging, setIsBlogDragging] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const activeForm = heroForms[activeService];
   const blogCarouselRef = useRef<HTMLDivElement | null>(null);
   const blogDragStateRef = useRef({
@@ -250,6 +251,10 @@ export default function Index() {
     startX: 0,
     startScrollLeft: 0,
   });
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const container = blogCarouselRef.current;
@@ -498,7 +503,34 @@ export default function Index() {
           </div>
         </div>
       </header>
-      <HomeChatPrototype />
+      {isMounted ? (
+        <HomeChatPrototype />
+      ) : (
+        <section className="relative pb-12">
+          <div className="container-wide">
+            <div className="overflow-hidden rounded-[3rem] border border-white/70 bg-white/80 shadow-2xl backdrop-blur">
+              <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
+                <div className="border-b border-slate-200/80 p-8 lg:border-b-0 lg:border-r lg:p-10">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">
+                    AI Support Prototype
+                  </div>
+                  <h2 className="mt-5 max-w-xl text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
+                    NVS assistant is loading.
+                  </h2>
+                  <p className="mt-5 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
+                    The chat experience will appear once the page finishes loading in your browser.
+                  </p>
+                </div>
+                <div className="bg-[linear-gradient(180deg,#f8fbfb_0%,#f3f8f7_100%)] p-6 sm:p-8 lg:p-10">
+                  <div className="rounded-[2rem] border border-slate-200 bg-white p-6 text-sm text-slate-500 shadow-lg">
+                    Loading chatbot...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
       <section className="relative py-24">
         <div className="container-wide">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
