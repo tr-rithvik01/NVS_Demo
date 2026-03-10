@@ -374,7 +374,7 @@ export default function Index() {
                 </div>
                 <button type="button" className="group relative block aspect-video w-full overflow-hidden">
                   <img
-                    src="https://picsum.photos/seed/nvs-home-video/960/640"
+                    src="https://drive.google.com/file/d/1H15uMeConLjXoplDcT_U9FHsjQccqfL1/view?usp=sharing"
                     alt="NVS operations video thumbnail"
                     className="h-full w-full scale-105 object-cover blur-[2px] transition duration-300 group-hover:scale-110"
                     referrerPolicy="no-referrer"
