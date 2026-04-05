@@ -25,6 +25,13 @@ View your app in AI Studio: https://ai.studio/apps/167a73f6-0fd3-497c-bf63-35844
 - `npm run dev` reads `.env.local`
 - `npm run preview` is closest to Cloudflare Pages and should use `.dev.vars`
 - You can copy `.dev.vars.example` to `.dev.vars` if you want Wrangler preview to use the same values
+- Do not commit `.dev.vars`; production should use Cloudflare dashboard environment variables instead
+
+## Cloudflare Pages CI
+
+- Build command: `npm run build`
+- Deploy command, only if your CI screen requires one: `npm run deploy:pages`
+- If you are using the standard Cloudflare Pages Git integration, prefer leaving deploy orchestration to Pages and do not commit local secret files
 
 ## Deploy
 
