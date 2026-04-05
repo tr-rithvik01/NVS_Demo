@@ -1,0 +1,9 @@
+# Optional for `npm run preview` with Wrangler Pages local preview.
+# `npm run dev` can use `.env.local`, but Wrangler prefers `.dev.vars`.
+
+AIPIPE_TOKEN=""
+AIPIPE_BASE_URL="https://aipipe.org/openrouter/v1"
+AIPIPE_MODEL="openai/gpt-4.1-nano-2025-04-14"
+BOOKING_WEBHOOK_URL=""
+BOOKING_NOTIFICATION_EMAIL=""
+APP_URL="http://localhost:3000"

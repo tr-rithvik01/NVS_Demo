@@ -1,11 +1,11 @@
-import { json } from "@remix-run/node";
-import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/cloudflare";
+import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData, Link } from "@remix-run/react";
 import { Calendar, User, ArrowLeft } from "lucide-react";
-import { prisma } from "~/lib/db.server";
 import { QuotableSummary } from "~/components/QuotableSummary";
 import { SEO } from "~/components/SEO";
 import { AudioSummaryPlayer } from "~/components/AudioSummaryPlayer";
+import { getBlogPostBySlug } from "~/lib/blog";
 
 function getArticleImages(slug: string) {
   return [
@@ -16,9 +16,7 @@ function getArticleImages(slug: string) {
 }
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const post = await prisma.blogPost.findUnique({
-    where: { slug: params.slug },
-  });
+  const post = params.slug ? getBlogPostBySlug(params.slug) : null;
 
   if (!post) {
     throw new Response("Not Found", { status: 404 });

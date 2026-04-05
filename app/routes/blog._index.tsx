@@ -1,10 +1,10 @@
-import { json } from "@remix-run/node";
-import type { MetaFunction } from "@remix-run/node";
+import { json } from "@remix-run/cloudflare";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData, Link } from "@remix-run/react";
 import { motion } from "motion/react";
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
-import { prisma } from "~/lib/db.server";
 import { QuotableSummary } from "~/components/QuotableSummary";
+import { getAllBlogPosts } from "~/lib/blog";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,9 +14,7 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async () => {
-  const posts = await prisma.blogPost.findMany({
-    orderBy: { publishedAt: "desc" },
-  });
+  const posts = getAllBlogPosts();
   return json({ posts });
 };
 

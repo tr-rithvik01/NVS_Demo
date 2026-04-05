@@ -6,24 +6,25 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/cloudflare";
 import styles from "./index.css?url";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap",
-  },
-];
+export const links: LinksFunction = () =>
+  [
+    { rel: "stylesheet", href: styles },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap",
+    },
+  ] satisfies ReturnType<LinksFunction>;
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

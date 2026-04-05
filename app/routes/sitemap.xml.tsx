@@ -1,10 +1,8 @@
-import type { LoaderFunctionArgs } from "@remix-run/node";
-import { prisma } from "~/lib/db.server";
+import type { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { getAllBlogPosts } from "~/lib/blog";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-  const posts = await prisma.blogPost.findMany({
-    select: { slug: true, publishedAt: true },
-  });
+  const posts = getAllBlogPosts();
 
   const baseUrl = new URL(request.url).origin;
 

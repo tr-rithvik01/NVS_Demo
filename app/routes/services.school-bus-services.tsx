@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { motion } from "motion/react";
 import { Link } from "@remix-run/react";
 import {

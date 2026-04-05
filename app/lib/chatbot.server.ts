@@ -1,10 +1,10 @@
+import type { AppLoadContext } from "@remix-run/cloudflare";
+import { getRuntimeEnv } from "./env.server";
+
 type ChatHistoryMessage = {
   role: "user" | "assistant";
   content: string;
 };
-
-const AIPIPE_BASE_URL = process.env.AIPIPE_BASE_URL || "https://aipipe.org/openrouter/v1";
-const AIPIPE_MODEL = process.env.AIPIPE_MODEL || "openai/gpt-4.1-nano-2025-04-14";
 
 const systemContext = `
 You are NVS Travel Solutions Assistant, a helpful pre-sales and support assistant for a Bengaluru transport service provider.
@@ -104,21 +104,27 @@ function fallbackReply(message: string) {
   return "I can help with NVS services, fleet options, school bus safety, corporate transport, cab rentals, office contact details, and support-style questions. Try asking about buses, employee transport, fleet categories, or how to get a quote.";
 }
 
-export async function getChatbotReply(message: string, history: ChatHistoryMessage[] = []) {
-  if (!process.env.AIPIPE_TOKEN) {
+export async function getChatbotReply(
+  context: AppLoadContext,
+  message: string,
+  history: ChatHistoryMessage[] = []
+) {
+  const env = getRuntimeEnv(context);
+
+  if (!env.AIPIPE_TOKEN) {
     return fallbackReply(message);
   }
 
   try {
-    const baseUrl = AIPIPE_BASE_URL.replace(/\/$/, "");
+    const baseUrl = (env.AIPIPE_BASE_URL || "").replace(/\/$/, "");
     const response = await fetch(`${baseUrl}/chat/completions`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.AIPIPE_TOKEN}`,
+        Authorization: `Bearer ${env.AIPIPE_TOKEN}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: AIPIPE_MODEL,
+        model: env.AIPIPE_MODEL,
         temperature: 0.7,
         max_tokens: 700,
         messages: [

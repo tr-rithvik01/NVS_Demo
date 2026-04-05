@@ -8,6 +8,11 @@ type ChatMessage = {
   content: string;
 };
 
+type ChatbotApiResponse = {
+  reply?: string;
+  error?: string;
+};
+
 type BookingFormState = {
   date: string;
   passengers: string;
@@ -196,7 +201,7 @@ export function HomeChatPrototype() {
         }),
       });
 
-      const data = await response.json();
+      const data = (await response.json()) as ChatbotApiResponse;
       setMessages((current) => [
         ...current,
         {
@@ -279,7 +284,7 @@ export function HomeChatPrototype() {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      const data = (await response.json()) as ChatbotApiResponse;
       if (!response.ok) {
         throw new Error(data.error || "Booking failed.");
       }

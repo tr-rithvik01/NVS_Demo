@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { AnimatePresence, motion } from "motion/react";
 import { Link } from "@remix-run/react";
 import { HomeChatPrototype } from "~/components/HomeChatPrototype";

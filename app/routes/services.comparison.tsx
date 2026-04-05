@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { Link } from "@remix-run/react";
 import { ArrowRight, Check, CircleDollarSign, Headset, ShieldCheck, X } from "lucide-react";
 import { useState } from "react";

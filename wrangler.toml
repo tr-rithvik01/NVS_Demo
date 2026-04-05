@@ -1,0 +1,7 @@
+name = "nvs-website"
+compatibility_date = "2026-04-05"
+pages_build_output_dir = "./build/client"
+
+[vars]
+AIPIPE_BASE_URL = "https://aipipe.org/openrouter/v1"
+AIPIPE_MODEL = "openai/gpt-4.1-nano-2025-04-14"
